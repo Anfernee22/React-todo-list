@@ -1,0 +1,35 @@
+.container-wrapper{
+    /* border: 1px solid red; */
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding-inline: 2em;
+}
+.list-count{
+    border: 1px solid #0560f2;
+    width: 100%;
+    height: 13vh;
+    background-color:  #0560f2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+} 
+
+@media (max-width: 768px){
+    .list-wrapper{
+        height: 85vh;
+    }
+    .container-wrapper{
+        height: 100%;
+        flex-direction: column;
+        gap: 1.3em;
+    }
+    .list-count{
+        height: 10vh;
+    } 
+}
