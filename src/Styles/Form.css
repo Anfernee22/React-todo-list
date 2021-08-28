@@ -20,7 +20,7 @@
 
 }
 .input-field{
-    border: 1px solid #0000ff;
+    /* border: 1px solid #0000ff; */
     width: 70%;
     display: flex;
 }
