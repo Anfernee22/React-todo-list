@@ -12,9 +12,9 @@ const ListContainer = ({inputText, setInputText, selectedOption, setSelectedOpti
                 <List todayList={todayList} setTodayList={setTodayList} upComingList={upComingList} setUpcomingList={setUpcomingList} saveList={saveList} setSaveList={setSaveList} count={count}/>
             </div>
 
-            <div className="list-count">
+            {/* <div className="list-count">
                 <p>You have {count} things to do.</p>
-            </div>
+            </div> */}
         </div>
     ) 
 }

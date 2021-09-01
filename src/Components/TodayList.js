@@ -9,7 +9,7 @@ const TodayList = ({list, id, li ,setTodayList, todayList, count}) => {
     const completedBtn = () => {
         setTodayList(todayList.map(item => {
             if(item.id === li.id){
-                
+                count = -1
                 return{
                     ...item, completed: !item.completed,
                 };
@@ -20,13 +20,16 @@ const TodayList = ({list, id, li ,setTodayList, todayList, count}) => {
     }
     return(
         <div className="container-1">
-            <ul key={id}>
-                <li className={`list ${li.completed ? 'completed' : ''}`}>{list}</li>
-                <div className="buttons">
+            <div className="today-list-container">
+                <ul key={id}>
+                    <li className={`today-list ${li.completed ? 'completed' : ''}`}>{list}</li>
+                </ul>
+
+                <div className="today-buttons">
                     <button className="delete-btn" onClick={deleteBtn}><i className="fas fa-trash"></i></button>
                     <button className="complete-btn" onClick={completedBtn}><i className="fas fa-check"></i></button>
                 </div>
-            </ul>
+            </div>
         </div>
     )
 }

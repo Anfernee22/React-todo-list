@@ -20,7 +20,7 @@
 
 }
 .input-field{
-    /* border: 1px solid #0000ff; */
+    border: 1px solid #0000ff;
     width: 70%;
     display: flex;
 }
@@ -40,18 +40,6 @@ input[type=text]{
     background-color: #0560f2;
     color: white;
     font-weight: bold;
-}
-.list{
-    display: flex;
-    gap: 1em;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    border: 1px solid;
-    padding: .3em .5em;
-    font-size: 1em;
-    width: 90%;
-
 }
 @media (max-width: 768px){
     .input-container{

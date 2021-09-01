@@ -18,13 +18,15 @@ const Upcoming = ({ list, li, id, upComingList, setUpcomingList, completed, save
     }
     return(
         <div className="container-2">
-             <ul key={id}>
-                <li className={`list ${li.completed ? 'completed' : ''}`} >{list}</li>
-                <div className="buttons">
+            <div className="upcoming-list-container">
+                <ul key={id}>
+                    <li className={`upcoming-list ${li.completed ? 'completed' : ''}`} >{list}</li>
+                </ul>
+                <div className="upcoming-buttons">
                     <button className="delete-btn" onClick={deleteBtn}><i className="fas fa-trash"></i></button>
                     <button className="complete-btn" onClick={completedBtn}><i className="fas fa-check"></i></button>
                 </div>
-            </ul>
+            </div>
         </div>
     )
 }
