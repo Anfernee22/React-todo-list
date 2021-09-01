@@ -9,7 +9,6 @@ const TodayList = ({list, id, li ,setTodayList, todayList, count}) => {
     const completedBtn = () => {
         setTodayList(todayList.map(item => {
             if(item.id === li.id){
-                count = -1
                 return{
                     ...item, completed: !item.completed,
                 };
