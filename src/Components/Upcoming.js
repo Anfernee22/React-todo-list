@@ -1,11 +1,10 @@
 import '../Styles/Upcoming.css'
 
-const Upcoming = ({ list, li, id, upComingList, setUpcomingList, completed, saveList}) => {
+const Upcoming = ({ list, li, id, upComingList, setUpcomingList}) => {
     const deleteBtn = () => {
         setUpcomingList(upComingList.filter(item => item.id !== li.id))
     }
     const completedBtn = () => {
-        // setCompleted(upComingList.filter(item => item.id === li.id))
         setUpcomingList(upComingList.map((item) => {
             if(item.id === li.id){
                 return{
@@ -14,10 +13,8 @@ const Upcoming = ({ list, li, id, upComingList, setUpcomingList, completed, save
             }
             return item;
         }))
-        console.log(li.completed)
     }
     return(
-        <div className="container-2">
             <div className="upcoming-list-container">
                 <ul key={id}>
                     <li className={`upcoming-list ${li.completed ? 'completed' : ''}`} >{list}</li>
@@ -27,7 +24,6 @@ const Upcoming = ({ list, li, id, upComingList, setUpcomingList, completed, save
                     <button className="complete-btn" onClick={completedBtn}><i className="fas fa-check"></i></button>
                 </div>
             </div>
-        </div>
     )
 }
 export default Upcoming;

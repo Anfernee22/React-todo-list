@@ -11,14 +11,12 @@
 .upcoming-list-container ul{
     width: 90%;
     list-style: none;
-
 }
-
 .upcoming-list{
     border: none;
     width: 100%;
     padding: .5em;
-    background-color: #0560f2;
+    background-color: #fff;
 }
 .upcoming-buttons{
     display: flex;

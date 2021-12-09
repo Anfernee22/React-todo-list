@@ -2,7 +2,7 @@
 const InputMessage = ({ emptyInput }) => {
     return(
         <div>
-            {emptyInput && <div><p>{emptyInput}</p></div>}
+            {emptyInput && <div><p style={{color: 'red'}}>{emptyInput}</p></div>}
         </div>
     )
 }

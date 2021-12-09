@@ -4,7 +4,6 @@ import '../Styles/Form.css'
 const Form = ( {inputText ,setInputText ,selectedOption ,setSelectedOption ,todayList, setTodayList, upComingList, setUpcomingList, saveList ,setSaveList ,emptyInput ,setEmptyInput}) => {
     const max = 10000;
     const min = 10;
-
     const inputChanged = (e) => {
         e.preventDefault()
         setInputText(e.target.value)
@@ -14,10 +13,9 @@ const Form = ( {inputText ,setInputText ,selectedOption ,setSelectedOption ,toda
         if(inputText === ''){
             setEmptyInput('Fill in the input')
         }else{
-            setSaveList([...saveList, {List: inputText, completed: false, id: Math.floor(Math.random() * (max - min) + min)}]);
+            setSaveList([...saveList, {List: inputText, id: Math.floor(Math.random() * (max - min) + min)}]);
             setInputText('');
             storeList()
-            // addToList()
         }
         setTimeout(() => setEmptyInput(), 1000)
     }
@@ -40,7 +38,6 @@ const Form = ( {inputText ,setInputText ,selectedOption ,setSelectedOption ,toda
                 <input type="radio"  name="list" value='Upcoming' checked={selectedOption === 'Upcoming'} onChange={optionChanged}/>
                 <label htmlFor="upcoming" id="upcoming">Upcoming</label>
             </div>
-            
             <InputMessage emptyInput={emptyInput}/>
             <div className="input-field" >
                 <input type="text" id="input-text" onChange={inputChanged} value={inputText} placeholder="Enter List"/>

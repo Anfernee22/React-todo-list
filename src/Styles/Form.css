@@ -1,5 +1,4 @@
 .input-container{
-    /* border: 1px solid blue; */
     width: 40%;
     height: 40vh;
     display: flex;
@@ -13,11 +12,9 @@
     gap: .8em;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid green; */
     width: 50%;
     padding: .3em;
     color: #0560f2;
-
 }
 .input-field{
     border: 1px solid #0000ff;
@@ -25,7 +22,6 @@
     display: flex;
 }
 input[type=text]{
-    /* border: 1px solid; */
     padding: .5em .3em;
     width: 80%;
     outline: none;
@@ -35,10 +31,9 @@ input[type=text]{
     font-weight: bold;
 }
 .input-field button{
-    /* border: 1px solid; */
     width: 20%;
     background-color: #0560f2;
-    color: white;
+    color: #fff;
     font-weight: bold;
 }
 @media (max-width: 768px){
@@ -47,19 +42,21 @@ input[type=text]{
         box-shadow: 1px 1px 10px 5px #0560f2;
         width: 90%;
         height: 20vh;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: .5em; */
     }
 }
-
-@media (max-width: 414px){
+@media screen and (max-width: 543px){
     .input-container{
         height: 15vh;
         box-shadow: none;
+        width: 100%;
         border: none;
         border-bottom: 1px solid #0000ff;
+    }
+    .input-radio{
+        background-color: #0606f3;
+        color: #fff;
+        padding: .5em;
+        width: 50%;
+        border-radius: 10px;
     }
 }

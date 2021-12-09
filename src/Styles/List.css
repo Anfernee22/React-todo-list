@@ -1,6 +1,4 @@
 .list-container{
-    /* border: 1px solid red; */
-    box-shadow: 1px 1px 10px 5px #0560f2;
     width: 40%;
     height: 60vh;
     display: flex;
@@ -8,69 +6,70 @@
     justify-content: center;
     align-items: center;
     gap: .5em;
-    
 }
 .today-container, .upcoming-container{
-    /* border: 1px solid red; */
     width: 100%;
     height: 30vh;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: .5em;
-    
+    background-color: #0560f2;
 }
 .list-container h3{
     border: 1px solid #0560f2;
-    background-color: #0560f2;
-    color: white;
+    background-color: #fff;
+    color: #0560f2;
     display: flex;
     justify-content: center;
     width: 100%;
     padding-block: .1em;
 }
-/* .container-1, .container-2{
-    border: 1px solid;
+.container{
+    overflow-y: auto;
+    height: 30vh;
     width: 100%;
-    height: 25vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: .5em;
-    padding-block: .5em;
-    
-} */
-
-
+    align-items: center;
+}
 @media (max-width: 768px){
     .list-container{
-        /* border: 1px solid red; */
-        /* box-shadow: 1px 1px 10px 5px #0560f2; */
-        box-shadow: none;
         width: 90%;
+        box-shadow: none;
         height: 50vh;
-        /* display: flex; */
         flex-direction: row;
-        /* justify-content: center; */
-        /* align-items: center; */
         gap: 0;
     }
     .today-container, .upcoming-container{
-        /* border: 1px solid red; */
         border: none;
         width: 50%;
         height: 100%;
-        /* overflow-y: auto; */
-        /* scroll-behavior: auto; */
-        /* display: flex; */
         flex-direction: column;
-        /* justify-content: center; */
-        /* align-items: center; */
+    }
+    .container{
+        height: 50vh;
     }
     .border-line{
-        border: 2px solid #0560f2;
+        border: 2px solid #fff;
         height: 100%;
+    }
+}
+@media screen and (max-width: 543px){
+    .list-container{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        width: 100%;
+        gap: .5em;
+    }
+    .border-line{
+        display: none;
+    }
+    .today-container, .upcoming-container{
+        width: 100%;
+        height: 35vh;
+        gap: .5em;
     }
 }

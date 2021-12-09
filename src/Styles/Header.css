@@ -10,22 +10,16 @@
     justify-content: center;
     align-items: center;
     background-color:#0560f2;
-    color: white;
+    color: #fff;
 }
 @media (max-width: 768px){
     .header{
-        /* border: 1px solid blue; */
         height: 5vh;
         font-size: .7em;
-        /* display: flex; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        /* background-color:#0560f2; */
-        /* color: white; */
     }
 }
-@media (max-width: 414px){
+@media (max-width: 543px){
     .header{
-        font-size: .5em;
+        font-size: .8em;
     }
 }
